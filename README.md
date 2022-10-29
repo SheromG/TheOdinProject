@@ -1,3 +1,3 @@
 # The Odin Project
 
-### First Project, "Recipes"
+## Solutions to the mini projects in The Odin Project webiste
