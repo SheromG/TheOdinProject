@@ -42,12 +42,13 @@ section
     width:80%;
     margin:auto;
     display: flex;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0px;
 }
 section .awesome
 {
     flex:1;
+    margin-right: 20px;
+    box-sizing: border-box;
 }
 section .awesome h2
 {
@@ -108,6 +109,7 @@ section .image
 {
     width: 150px;
     text-align: center;
+    padding-bottom: 100px;
 }
 .container3
 {
@@ -115,7 +117,7 @@ section .image
 }
 .container3 .container3placeholder
 {
-    width: 70%;
+    width: 60%;
     margin: auto;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -133,4 +135,58 @@ section .image
     font-weight: bold;
     font-size: 24px;
     float:right;
+}
+.container4
+{
+    width: 80%;
+    margin: auto;
+    background-color:#3882F6;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+.container4 .container4placeholder
+{
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+.container4 .container4placeholder .text
+{
+    padding: 50px 0px;
+
+}
+.container4 .container4placeholder h3
+{
+    color:white;
+}
+.container4 .container4placeholder p
+{
+    color:#dadada;
+}
+.container4 .container4placeholder .btn2
+{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: end;
+}
+.container4 .container4placeholder .btn2 button
+{
+    color:white;
+    border-color: white;
+    border-radius: 5px;
+    padding: 5px 30px;
+    font-size: 20px;
+    background-color: transparent;
+}
+footer
+{
+    background-color: #1F2937;
+    width:100%
+}
+footer p
+{
+    text-align: center;
+    padding: 25px 0px;
+    color: white;
 }
