@@ -2,5 +2,6 @@
 
 ## Solutions to the mini projects in The Odin Project website
 
-#### 1. Project: Recipe Done
-#### 1. Project: Landing Page Done
+### Completed Projects
+#### 1. Project: Recipe 
+#### 1. Project: Landing Page
