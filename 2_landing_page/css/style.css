@@ -26,16 +26,24 @@ header #logo
 header #navbar
 {
     font-size: 18px;
-    color:#E5E7EB;
 }
 header #navbar ul
 {
     list-style: none;
 }
-header #navbar li
+header #navbar li 
 {
     display: inline-block;
     padding: 0px 10px;
+}
+header #navbar li a
+{
+    text-decoration: none;
+    color:#E5E7EB;
+}
+header #navbar li a:hover
+{
+    color:#6c6c6c;
 }
 section
 {
