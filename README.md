@@ -4,4 +4,5 @@
 
 ### Completed Projects
 #### 1. Project: Recipe 
-#### 1. Project: Landing Page
+#### 2. Project: Landing Page
+#### 3. Project: Rock Paper Scissors
