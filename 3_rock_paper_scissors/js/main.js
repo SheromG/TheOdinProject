@@ -28,29 +28,37 @@ function logic(playerSelection, computerSelection)
 
 let computerScore = 0;
 let playerScore = 0;
-
 let myScore = document.getElementById('you');
 let compScore = document.getElementById('computer');
+let results = document.getElementById('result');
+let myPic = document.getElementById('myPic');
+let compPic = document.getElementById('compPic');
 
 function game()
 {
     const computerChoice = Math.floor(Math.random() * 3) + 1;
+
     const computerSelection = pick(computerChoice);
+    const playerSelection = pick(playerChoice);
 
-    const result = logic(pick(playerChoice),computerSelection);
+    const result = logic(playerSelection,computerSelection);
 
-    if(result === "Computer Wins")
-    {
-        computerScore++; 
-        compScore.innerHTML = computerScore;
-    }
-    else if(result === "Player Wins")
-    {
-        playerScore++;
-        myScore.innerHTML = playerScore;
-    }
+    if(result === "Computer Wins"){ computerScore++; }
+    else if(result === "Player Wins"){ playerScore++; }
 
-    console.log("User Select " + pick(playerChoice));
+    compScore.innerHTML = computerScore;
+    myScore.innerHTML = playerScore;
+    results.innerHTML = result;
+
+    if (playerSelection === "Rock" ){ myPic.src = "Media/Rock.png"}
+    else if (playerSelection === "Paper" ){ myPic.src = "Media/Paper.png"}
+    else if (playerSelection === "Scissors" ){ myPic.src = "Media/Scissors.png"}
+
+    if (computerSelection === "Rock" ){ compPic.src = "Media/Rock.png"}
+    else if (computerSelection === "Paper" ){ compPic.src = "Media/Paper.png"}
+    else if (computerSelection === "Scissors" ){ compPic.src = "Media/Scissors.png"}
+
+    console.log("User Select " + playerSelection);
     console.log("Computer Select " + computerSelection);
 
     console.log(result);
@@ -58,18 +66,19 @@ function game()
     console.log(`Player score ${playerScore}, Computer score ${computerScore}`);
     console.log("");
 
-    if(playerScore == 5)
+    if(playerScore === 5)
     {
         console.log("The Winner is Player. Congratulations!\n");
         playerScore = 0;
+        computerScore = 0;
     }
-    else if(computerScore == 5)
+    else if(computerScore === 5)
     {
         console.log("The Winner is the Computer. Congratulations!\n");
-        computerScore == 0;
+        playerScore = 0;
+        computerScore = 0;
     }
 }
-
 
 let playerChoice;
 
@@ -94,3 +103,9 @@ pScissors.addEventListener('click', function(event)
     playerChoice = 3;   
     game();
 }, false);
+
+function popUp()
+{
+    let popup = document.getElementById("popUpContainer");
+    popup.classList.toggle("show");
+}

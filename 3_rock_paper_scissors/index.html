@@ -16,19 +16,27 @@
     <section>
         <div class = "choices">
             <div id = "rps">
-                <button id = "rock"><img src = "Media/Rock.png"><p>Rock</p></button>
-                <button id = "paper" ><img src = "Media/Paper.png"><p>Paper</p></button>
-                <button id = "scissors"><img src = "Media/Scissors.png" ><p>Scissors</p></button>
+                <button id = "rock" onclick = "popUp()"><img src = "Media/Rock.png"><p>Rock</p></button>
+                <button id = "paper" onclick = "popUp()"><img src = "Media/Paper.png"><p>Paper</p></button>
+                <button id = "scissors" onclick = "popUp()"><img src = "Media/Scissors.png" ><p>Scissors</p></button>
             </div>
             <div class = "container">
                 <h3>Scores</h3>
                 <div class = "scores">
                     <div>Your score: <div id = "you"data-value="0">0</div></div>
                     <div>Computer score: <div id = "computer" data-value="0">0</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class = "popup">David Sherom Granada
+        <span class = "popupContent" id = "popUpContainer" onclick = "popUp()">
+            <img id = "myPic" src = "Media/Rock.png">
+            <div id = "result">Results</div>
+            <img id = "compPic" src = "Media/Paper.png">
+        </span>
+    </div>
     <footer>
         <p>&copy David Sherom Granada 2022</p>
     </footer>
