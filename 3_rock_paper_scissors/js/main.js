@@ -1,9 +1,9 @@
 function pick(choice)
 {
     let selection;
-    if (choice === 1) {selection = 'Rock';}
-    else if (choice === 2) {selection = 'Paper';}
-    else if (choice === 3) {selection = 'Scissors';}
+    if (choice === 1) {selection = "Rock";}
+    else if (choice === 2) {selection = "Paper";}
+    else if (choice === 3) {selection = "Scissors";}
 
     return selection;
 }
@@ -25,30 +25,51 @@ function logic(playerSelection, computerSelection)
     }
     return result ;
 }
-function computer()
+
+let computerScore = 0;
+let playerScore = 0;
+
+let myScore = document.getElementById('you');
+let compScore = document.getElementById('computer');
+
+function game()
 {
     const computerChoice = Math.floor(Math.random() * 3) + 1;
     const computerSelection = pick(computerChoice);
 
-    return computerSelection;
-}
-function game()
-{
-    const playerSelection = pick(playerChoice);
-    const result = logic(playerSelection,computer());
+    const result = logic(pick(playerChoice),computerSelection);
 
-    console.log("User Select " + playerSelection);
-    console.log("Computer Select " + computer());
+    if(result === "Computer Wins")
+    {
+        computerScore++; 
+        compScore.innerHTML = computerScore;
+    }
+    else if(result === "Player Wins")
+    {
+        playerScore++;
+        myScore.innerHTML = playerScore;
+    }
 
-    if(result === "Computer Wins"){computerScore++}
-    else if(result === "Player Wins"){playerScore++}
+    console.log("User Select " + pick(playerChoice));
+    console.log("Computer Select " + computerSelection);
 
     console.log(result);
+
     console.log(`Player score ${playerScore}, Computer score ${computerScore}`);
     console.log("");
+
+    if(playerScore == 5)
+    {
+        console.log("The Winner is Player. Congratulations!\n");
+        playerScore = 0;
+    }
+    else if(computerScore == 5)
+    {
+        console.log("The Winner is the Computer. Congratulations!\n");
+        computerScore == 0;
+    }
 }
-let computerScore = 0;
-let playerScore = 0;
+
 
 let playerChoice;
 
@@ -73,18 +94,3 @@ pScissors.addEventListener('click', function(event)
     playerChoice = 3;   
     game();
 }, false);
-
-/*
-if(playerScore > computerScore)
-{
-    console.log("The Winner is Player. Congratulations!");
-}
-else if(playerScore < computerScore)
-{
-    console.log("The Winner is the Computer. Congratulations!");
-}
-else
-{
-    console.log("And the winner is the both of you! Congratulations!");
-}
-*/
