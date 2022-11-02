@@ -5,4 +5,4 @@
 ### Completed Projects
 #### 1. Project: Recipe 
 #### 2. Project: Landing Page
-#### 3. Project: Rock Paper Scissors // Console Only (Graphics - not yet done)
+#### 3. Project: Rock Paper Scissors // Console Only (Graphics working, result is in console)
