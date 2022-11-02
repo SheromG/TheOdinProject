@@ -39,25 +39,36 @@ footer
     width: 80%;
     margin: auto;
 }
-.choices ul
+.choices
 {
-    list-style-type: none;
     display: flex;
+    justify-content:space-around;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items:center;
     text-align: center;
 }
-.choices ul li img
+.choices #rps button
 {
-    border: 1px solid black;
+    border:1px solid #343a40;
+    border-radius: 10px;
+    margin: 5px 30px;
+    box-sizing: border-box;
+}
+.choices #rps img
+{
     height: 250px;
 }
 @media only screen and (max-width: 768px) 
 {
-    .choices ul li img
+    .choices #rps button
     {
-        border: 1px solid black;
+    border:1px solid #343a40;
+    border-radius: 10px;
+    margin: 5px 10px;
+    box-sizing: border-box;
+    }
+    .choices #rps img
+    {
         height: 125px;
     }
 }

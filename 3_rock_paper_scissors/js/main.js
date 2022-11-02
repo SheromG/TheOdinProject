@@ -25,31 +25,56 @@ function logic(playerSelection, computerSelection)
     }
     return result ;
 }
-
-let computerScore = 0;
-let playerScore = 0;
-1
-for(let i = 0; i < 5; i++)
+function computer()
 {
-    let playerChoice = prompt("1 - Rock\n2 - Paper \n3 - Scissors");
-    playerChoice = parseInt(playerChoice);
-    
     const computerChoice = Math.floor(Math.random() * 3) + 1;
-
     const computerSelection = pick(computerChoice);
-    const playerSelection = pick(playerChoice);
 
-    const result = logic(playerSelection,computerSelection);
-    
+    return computerSelection;
+}
+function game()
+{
+    const playerSelection = pick(playerChoice);
+    const result = logic(playerSelection,computer());
+
+    console.log("User Select " + playerSelection);
+    console.log("Computer Select " + computer());
+
     if(result === "Computer Wins"){computerScore++}
     else if(result === "Player Wins"){playerScore++}
 
-    console.log("User Select " + playerSelection);
-    console.log("Computer Select " + computerSelection);
     console.log(result);
     console.log(`Player score ${playerScore}, Computer score ${computerScore}`);
     console.log("");
 }
+let computerScore = 0;
+let playerScore = 0;
+
+let playerChoice;
+
+const pRock = document.querySelector('#rock');
+const pPaper = document.querySelector('#paper');
+const pScissors = document.querySelector('#scissors');
+
+pRock.addEventListener('click', function(event) 
+{   
+    playerChoice = 1;
+    game();
+}, false);
+
+pPaper.addEventListener('click', function(event) 
+{   
+    playerChoice = 2;   
+    game();
+}, false);
+
+pScissors.addEventListener('click', function(event) 
+{   
+    playerChoice = 3;   
+    game();
+}, false);
+
+/*
 if(playerScore > computerScore)
 {
     console.log("The Winner is Player. Congratulations!");
@@ -62,3 +87,4 @@ else
 {
     console.log("And the winner is the both of you! Congratulations!");
 }
+*/
