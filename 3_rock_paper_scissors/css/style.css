@@ -52,6 +52,12 @@ footer
     border-radius: 10px;
     margin: 5px 30px;
     box-sizing: border-box;
+    font-size: 1em;
+}
+.choices #rps button:hover
+{
+    background-color:darkgrey;
+    color:white
 }
 .choices #rps img
 {
@@ -132,22 +138,24 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -450px;
+    margin-top: -350px;
 }
 .popup .popupContent 
 {
     visibility: hidden;
-    width: 50%;
-    background-color: #343a40;
+    width: 70%;
+    height: 300px;
+    background-color: #5a5b5d;
     color: white;
     text-align: center;
     border-radius: 10px;
     padding: 8px 0;
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     bottom: 125%;
+    font-size: 1.5em;
 }
 .popup .show 
 {
@@ -155,9 +163,13 @@ footer
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
-.popup .popupContent  img
+.popup .popupContent #result
 {
-    height: 150px;
+    font-size: 2.5em;
+}
+.popup .popupContent img
+{
+    height: 200px;
 }
 #myPic
 {
