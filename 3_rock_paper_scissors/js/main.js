@@ -72,22 +72,22 @@ function game()
 
     if(playerScore > 4)
     {
-        winner = "Congratulations"
+        winner = "Congratulations!"
         finalwinner = "You beat the computer. Well done!";
         console.log("The Winner is Player. Congratulations!\n");
+        alert(`${winner} \n\n You scored 5 points! \n The Final score is ${playerScore} - ${computerScore} in your favor \n\n${finalwinner}`);
         playerScore = 0;
         computerScore = 0;
-        alert(`${winner} \n ${finalwinner}`);
         location.reload();
     }
     else if(computerScore > 4)
     {
-        winner = "Aww too bad"
+        winner = "Aww too bad!"
         finalwinner = "The Computer beat you. Try again next time.";
         console.log("The Winner is the Computer. Congratulations!\n");
+        alert(`${winner} \n\n The computer has scored 5 points! \n The Final score is ${playerScore} - ${computerScore} in the computer's favor \n\n${finalwinner}`);
         playerScore = 0;
         computerScore = 0;
-        alert(`${winner} \n ${finalwinner}`);
         location.reload();
     }
 }

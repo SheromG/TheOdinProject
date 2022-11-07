@@ -54,13 +54,14 @@ footer
 }
 .choices #rps button:hover
 {
-    background-color:darkgrey;
+    background-color: #5a5b5d;
     color:white
 }
 .choices #rps img
 {
-    height: 250px;
+    height: 200px;
 }
+
 @media only screen and (max-width: 768px) 
 {
     .choices #rps button
@@ -138,6 +139,13 @@ footer
     align-items: center;
     margin-top: -350px;
 }
+@media only screen and (min-width: 768px) 
+{
+    .popup
+    {
+        margin-top: -265px;
+    }
+}
 .popup .popupContent 
 {
     visibility: hidden;
@@ -173,4 +181,39 @@ footer
 {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+@media only screen and (max-width: 428px) 
+{
+    .popup
+    {
+        margin-top: -265px;
+    }
+    .popup .popupContent 
+    {
+        visibility: hidden;
+        width: 90%;
+        height: 500px;
+        background-color: #5a5b5d;
+        color: white;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 8px 0;
+        bottom: 125%;
+        font-size: 1.5em;
+    }
+    .popup .show 
+    {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+    .popup .popupContent #result
+    {
+        font-size: 2em;
+    }
+    .popup .popupContent img
+    {
+        height: 150px;
+    }
 }
