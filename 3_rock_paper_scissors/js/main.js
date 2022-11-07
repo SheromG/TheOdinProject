@@ -31,6 +31,7 @@ let playerScore = 0;
 let myScore = document.getElementById('you');
 let compScore = document.getElementById('computer');
 let results = document.getElementById('result');
+
 let myPic = document.getElementById('myPic');
 let compPic = document.getElementById('compPic');
 
@@ -66,17 +67,28 @@ function game()
     console.log(`Player score ${playerScore}, Computer score ${computerScore}`);
     console.log("");
 
-    if(playerScore === 5)
+    let winner;
+    let finalwinner;
+
+    if(playerScore > 4)
     {
+        winner = "Congratulations"
+        finalwinner = "You beat the computer. Well done!";
         console.log("The Winner is Player. Congratulations!\n");
         playerScore = 0;
         computerScore = 0;
+        alert(`${winner} \n ${finalwinner}`);
+        location.reload();
     }
-    else if(computerScore === 5)
+    else if(computerScore > 4)
     {
+        winner = "Aww too bad"
+        finalwinner = "The Computer beat you. Try again next time.";
         console.log("The Winner is the Computer. Congratulations!\n");
         playerScore = 0;
         computerScore = 0;
+        alert(`${winner} \n ${finalwinner}`);
+        location.reload();
     }
 }
 
